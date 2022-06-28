@@ -1,0 +1,18 @@
+{% extends 'common.html' %}
+
+{% block title %} 
+    Add Money
+{% endblock %}
+
+
+{% block content %}
+<div class="text-center">
+    <form action="add" method="POST">
+        {% csrf_token %}
+        <input type="number" name="money" class="rounded">
+        <input type="submit" class="btn btn-success" value="Add Money">
+        
+    </form>
+    {{msg}}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'common.html' %}
+{% load crispy_forms_tags %}
+{% block title %} 
+    Add Money
+{% endblock %}
+
+
+{% block content %}
+<br>
+<div style="margin-left:30%">
+    
+        <form action="exp" method="post" class="w-50 bg-light bg-opacity-25 p-2 rounded">
+            {% csrf_token %}
+            {{form |crispy}}
+            <br><br>
+            <input type="submit" class="btn btn-warning">
+            {{msg}}
+        </form>
+</div>
+{% endblock %}

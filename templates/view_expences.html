@@ -1,0 +1,28 @@
+{% extends 'common.html' %}
+
+{% block title %} 
+    Expences
+{% endblock %}
+
+
+{% block content %}
+<div class="text-center">
+   <h2>Your expence history :</h2>
+   <br>
+   <table class="table text-dark bg-light fw-bold bg-opacity-25">
+       <tr>
+           <td>Expence</td>
+           <td>Amount</td>
+           <td>Date</td>
+       </tr>
+        {% for e in msg %}
+        <tr>
+                <td>{{ e.expence }}</td>
+                <td>{{ e.pay }}</td>
+                <td>{{ e.date }}</td>
+        </tr>
+        {% endfor %}
+        
+    <table>
+</div>
+{% endblock %}
